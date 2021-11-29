@@ -85,7 +85,8 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnDestroy(){
         GameEvents.Instance.onGameReset -= DestroyEnemy;
-        GameEvents.Instance.EnemyDestroyed();
+        if(gameStateData.GameplayState)
+            GameEvents.Instance.EnemyDestroyed();
     }
 
 }

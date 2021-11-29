@@ -29,10 +29,10 @@ public class EnemySpawnerBehavior : MonoBehaviour
             if(nextSpawnTime >= enemySpawnInterval){
                 while(currentEnemyCount < maxEnemyCount){
                     var spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    if(SpawnPointIsActive(spawnPointIndex)){
+                    //if(SpawnPointIsActive(spawnPointIndex)){
                         SpawnEnemy(spawnPointIndex);
                         break;
-                    }
+                    //}
                 }
 
                 nextSpawnTime = 0;
