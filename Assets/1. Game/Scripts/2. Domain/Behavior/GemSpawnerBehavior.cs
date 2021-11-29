@@ -27,10 +27,10 @@ public class GemSpawnerBehavior : MonoBehaviour
             if(nextSpawnTime >= gemSpawnInterval){
                 while(currentGemCount < maxGemCount){
                     var spawnPointIndex = Random.Range(0, spawnPoints.Length);
-                    if(!SpawnPointIsInUse(spawnPointIndex)){
+                    //if(!SpawnPointIsInUse(spawnPointIndex)){
                         SpawnGem(spawnPointIndex);
                         break;
-                    }
+                    //}
                 }
                 
                 nextSpawnTime = 0;
