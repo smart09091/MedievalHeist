@@ -27,7 +27,7 @@ public class EnemySpawnerBehavior : MonoBehaviour
         if (gameStateData.GameplayState) {
             nextSpawnTime += Time.deltaTime;
             if(nextSpawnTime >= enemySpawnInterval){
-                while(currentEnemyCount != maxEnemyCount){
+                while(currentEnemyCount < maxEnemyCount){
                     var spawnPointIndex = Random.Range(0, spawnPoints.Length);
                     if(SpawnPointIsActive(spawnPointIndex)){
                         SpawnEnemy(spawnPointIndex);

@@ -25,7 +25,7 @@ public class GemSpawnerBehavior : MonoBehaviour
         if (gameStateData.GameplayState) {
             nextSpawnTime += Time.deltaTime;
             if(nextSpawnTime >= gemSpawnInterval){
-                while(currentGemCount != maxGemCount){
+                while(currentGemCount < maxGemCount){
                     var spawnPointIndex = Random.Range(0, spawnPoints.Length);
                     if(!SpawnPointIsInUse(spawnPointIndex)){
                         SpawnGem(spawnPointIndex);
